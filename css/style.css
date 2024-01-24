@@ -241,6 +241,7 @@ html {
 
 .locked {
     overflow-y: hidden;
+    overflow: hidden;
 }
 
 /*-------------------------------- ПРИЧИНЫ --------------------------------*/
@@ -1643,6 +1644,9 @@ html {
 
 
 @media only screen and (max-width: 545px) {
+	.main_section {
+		padding: 0 30px 50px 70px;
+	}
 
 	.header_text p {
 		margin-top: 20px;
@@ -1652,12 +1656,14 @@ html {
 		position: absolute;
 		top: 0;
 		left: 31px;
+		height: 500px;
 	}
 
 	.main_rows-second {
 		position: absolute;
 		top: 318px;
 		left: 47px;
+		height: 200px;
 	}
 
 	.main_rows-third {
