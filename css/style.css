@@ -196,6 +196,11 @@ html {
 .main_rows-third {
 	position: absolute;
 	bottom: -420px;
+	 -webkit-transform: rotate(-90deg); /* Для Safari и Chrome */
+    -moz-transform: rotate(-90deg); /* Для Firefox */
+    -ms-transform: rotate(-90deg); /* Для Internet Explorer 9 */
+    -o-transform: rotate(-90deg); /* Для Opera */
+    transform: rotate(-90deg);
 }
 
 .nav_adaptive {
