@@ -136,6 +136,7 @@ body {
 	font-family:  Cruinn-Regular;
 	font-weight: 400;
 	text-transform: uppercase;
+	z-index: 20;
 }
 
 
