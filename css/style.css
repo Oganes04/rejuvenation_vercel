@@ -1,38 +1,5 @@
-/*------------------------ Variables---------------------------*/
 
-/*--- Colors ---*/
-:root {
-	--dark-text-color: #30291B;
-	--white-text-color: #FFFFFF;
-	--grey-text-color: #707070;
-	--translucent-color: #E3DDD3;
-	--accent: #81693C;
-	--light-accent: #BCA986;
-	--beige-bg: #FAF7EF;
-	--hover-btn-color: #957D50;
-	--active-btn-color: #6D5528;
-}
-
-
-@font-face {
-  font-family: Cruinn-Bold;
-  src: url("../fonts/Cruinn Bold.ttf");
-}
-
-@font-face {
-  font-family: Cruinn-Medium;
-  src: url("../fonts/Cruinn Bold.ttf");
-}
-@font-face {
-  font-family: Cruinn-Regular;
-  src: url("../fonts/Cruinn Regular.ttf");
-}
-
-@font-face {
-  font-family: Raleway;
-  src: url("../fonts/Raleway.ttf");
-}
-
+@import url("variables.css");
 
 body {
 	margin: 0 auto;
@@ -43,9 +10,7 @@ html {
  scroll-behavior: smooth;
 }
 
-
 /*------------------------- MAIN -------------------------*/
-
 
 .main_section {
 	background-color: var(--beige-bg);
@@ -876,7 +841,6 @@ html {
 	position: absolute;
 	right: 89px;
 	bottom: 0px;
-	/*display: none;*/
 }
 
 
