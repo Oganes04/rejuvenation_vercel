@@ -230,6 +230,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	text-align: left;
 }
 
 .account_info-emailText, .account_info-phoneText {
@@ -386,7 +387,7 @@ html {
 
 .progress_week-decription p {
 	font-family: Raleway;
-	font-size:clamp(12px, 1.14vw, 1.14vw);
+	font-size:clamp(14px, 1.14vw, 1.14vw);
 	font-weight: 300;
 	color: var(--dark-text-color);
 	margin-bottom: 30px;
