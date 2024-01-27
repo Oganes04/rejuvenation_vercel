@@ -231,6 +231,8 @@ html {
 	flex-direction: column;
 	gap: 10px;
 	text-align: left;
+	justify-content: start;
+	align-items: flex-start;
 }
 
 .account_info-emailText, .account_info-phoneText {
