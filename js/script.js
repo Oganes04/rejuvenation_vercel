@@ -304,6 +304,44 @@ $('.slider-2').on('beforeChange', function(event, slick, currentSlide, nextSlide
     });
 
 
+
+
+    
+$('#editButton').click(function() {
+    var nameElement = $('#name');
+    var emailElement = $('#email');
+    var phoneElement = $('#phone');
+
+    if ($(this).text() === 'Изменить данные') {
+        $(this).text('Сохранить');
+
+        var nameClone = nameElement.clone();
+        var nameInput = $('<input>').attr('type', 'text').val(nameClone.text()).addClass(nameClone.attr('class'));
+        nameElement.replaceWith(nameInput);
+
+        var emailClone = emailElement.clone();
+        var emailInput = $('<input>').attr('type', 'text').val(emailClone.text()).addClass(emailClone.attr('class'));
+        emailElement.replaceWith(emailInput);
+
+        var phoneClone = phoneElement.clone();
+        var phoneInput = $('<input>').attr('type', 'text').val(phoneClone.text()).addClass(phoneClone.attr('class'));
+        phoneElement.replaceWith(phoneInput);
+    } else {
+        $(this).text('Изменить данные');
+
+        var nameSpan = $('<span>').text(nameElement.val()).addClass(nameElement.attr('class'));
+        nameElement.replaceWith(nameSpan);
+
+        var emailSpan = $('<span>').text(emailElement.val()).addClass(emailElement.attr('class'));
+        emailElement.replaceWith(emailSpan);
+
+        var phoneSpan = $('<span>').text(phoneElement.val()).addClass(phoneElement.attr('class'));
+        phoneElement.replaceWith(phoneSpan);
+    }
+});
+
+
+
 });
 
 
@@ -319,3 +357,4 @@ $('.slider-2').on('beforeChange', function(event, slick, currentSlide, nextSlide
 
 //     reader.readAsDataURL(file);
 // });
+

@@ -216,6 +216,16 @@ html {
 	font-weight: 500;
 	color:  var(--accent);
 	margin-bottom: 25px;
+	max-width: 280px;
+}
+
+.account_info-name input {
+	font-family: Cruinn-Medium;
+	font-size: clamp(28px, 2.6vw, 2.6vw);
+	font-weight: 500;
+	color:  var(--accent);
+	margin-bottom: 25px;
+	max-width: 280px;
 }
 
 .account_info-email {
@@ -223,7 +233,13 @@ html {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	max-width: 280px;
 }
+
+.account_info-email input {
+	max-width: 280px;
+}
+
 
 .account_info-phone {
 	margin-bottom: 63px;
@@ -233,6 +249,11 @@ html {
 	text-align: left;
 	justify-content: start;
 	align-items: flex-start;
+	max-width: 280px;
+}
+
+.account_info-phone input {
+	max-width: 280px;
 }
 
 .account_info-emailText, .account_info-phoneText {
