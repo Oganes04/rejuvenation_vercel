@@ -154,6 +154,37 @@ html {
 	z-index: 10;
 }
 
+.play_svg {
+	border-radius: 50%;
+	transition: all .3s ease;
+}
+
+.circle {
+	transition: all .3s ease;
+}
+
+.path-1 {
+	transition: all .3s ease;
+}
+
+.play:hover .circle {
+	fill: #F7F1E7;
+	stroke: #A99164;
+}
+
+.play:hover .path-1 {
+	fill: #A99164;
+}
+
+.play:hover .play_svg {
+	
+	box-shadow: 0 0 10px #cccccc;
+}
+
+
+
+
+
 .main_rows-first {
 	position: absolute;
 	top: 0;
