@@ -236,7 +236,16 @@ $('.slider-2').on('beforeChange', function(event, slick, currentSlide, nextSlide
         $('.line-' + (i - 1) + ' path').attr('stroke', '#81693C');        }
     });
 
-
+$('.slider-2').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        // Проверка, переходит ли слайдер назад
+        if (nextSlide < currentSlide) {
+            // Изменение цвета кружков и линий на #9B9996
+            for (var i = nextSlide; i < currentSlide; i++) {
+                $('.filled-dot-' + (i - 1) + ' circle').attr('fill', '#9B9996');
+                $('.line-' + (i - 1) + ' path').attr('stroke', '#9B9996');
+            }
+        }
+    });
 
 
 
