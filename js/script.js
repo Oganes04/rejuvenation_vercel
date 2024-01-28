@@ -160,7 +160,7 @@ function getLastVisibleCircle() {
 
 
 
-
+    
 
 
 
@@ -171,11 +171,11 @@ function getLastVisibleCircle() {
 
 $('.slider-2').on('afterChange', function(event, slick, currentSlide, nextSlide){
     
-    // Сначала скроем все закрашенные кружки
+
     $('.filled-dot-').hide();
     $('.empty-dot-').hide();
 
-    // Затем покажем закрашенный кружок текущего слайда
+
     $('.empty-dot-' + currentSlide).show();
     $('.filled-dot-' + currentSlide).hide();
     $('.empty-dot-' + (currentSlide - 1)).hide();
@@ -191,18 +191,15 @@ $('.slider-2').on('afterChange', function(event, slick, currentSlide, nextSlide)
     }
    
  
-
-
 });
 
 
 $('.slider-2').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 
-    // Сначала скроем все закрашенные кружки
+   
     $('.filled-dot-').hide();
     $('.empty-dot-').hide();
 
-    // Затем покажем закрашенный кружок текущего слайда
     
     $('.empty-dot-' + currentSlide).hide();
         $('.filled-dot-' + currentSlide).show();
@@ -225,18 +222,19 @@ $('.slider-2').on('beforeChange', function(event, slick, currentSlide, nextSlide
     }
     currentSlide = nextSlide;
 
-
-
-
-
 });
 
+ $('body').on('click', 'svg[id^="dot"]', function() {
+        // Извлечение номера слайда из ID SVG элемента
+        var slideNumber = $(this).attr("id").split("dot")[1];
 
+        // Переключение слайдера на соответствующий слайд
+        $('.slider-2').slick('slickGoTo', slideNumber);
 
-
-
-
-
+        for (var i = 0; i <= slideNumber; i++) {
+           $('.filled-dot-' + (i - 1) + ' circle').attr('fill', '#81693C');
+        $('.line-' + (i - 1) + ' path').attr('stroke', '#81693C');        }
+    });
 
 
 
