@@ -225,7 +225,10 @@ html {
 	font-weight: 500;
 	color:  var(--accent);
 	margin-bottom: 25px;
-	max-width: 280px;
+	width: 280px;
+	border: 1px solid var(--accent);
+	padding: 7px;
+	border-radius: 7px;
 }
 
 .account_info-email {
@@ -237,7 +240,14 @@ html {
 }
 
 .account_info-email input {
-	max-width: 280px;
+	width: 280px;
+	font-family: Raleway;
+	font-size: clamp(18px, 1.3vw, 1.3vw);
+	font-weight: 300;
+	color: var(--dark-text-color);
+	border: 1px solid var(--accent);
+	padding: 7px;
+	border-radius: 7px;
 }
 
 
@@ -253,7 +263,14 @@ html {
 }
 
 .account_info-phone input {
-	max-width: 280px;
+	width: 280px;
+	font-family: Raleway;
+	font-size: clamp(18px, 1.3vw, 1.3vw);
+	font-weight: 300;
+	color: var(--dark-text-color);
+	border: 1px solid var(--accent);
+	padding: 7px;
+	border-radius: 7px;
 }
 
 .account_info-emailText, .account_info-phoneText {

@@ -183,10 +183,11 @@ $('.slider-2').on('afterChange', function(event, slick, currentSlide, nextSlide)
     $('.line-' + (currentSlide - 1) + ' path').attr('stroke', '#81693C');
 
 
-
+    var lineWidth = $("[class*='line-']").width();
+    lineWidth = lineWidth * 2;
     var currentDot = document.querySelector('.empty-dot-' + currentSlide);
     if (currentDot == getLastVisibleCircle()) {
-        document.querySelector('.progress_bar').scrollBy(570, 0);
+        document.querySelector('.progress_bar').scrollBy(lineWidth, 0);
     }
    
  
@@ -215,8 +216,10 @@ $('.slider-2').on('beforeChange', function(event, slick, currentSlide, nextSlide
 
 
         var currentDotBack = document.querySelector('.filled-dot-' + currentSlide);
+        var lineWidth = $("[class*='line-']").width();
+        lineWidth = lineWidth * 2;
         if (currentDotBack == getFirstVisibleCircle()) {
-            document.querySelector('.progress_bar').scrollBy(-579, 0);
+            document.querySelector('.progress_bar').scrollBy(-lineWidth, 0);
         }
 
     }
@@ -306,39 +309,54 @@ $('.slider-2').on('beforeChange', function(event, slick, currentSlide, nextSlide
 
 
 
-    
+var nameInput = $('<input>').attr('type', 'text');
+var emailInput = $('<input>').attr('type', 'text');
+var phoneInput = $('<input>').attr('type', 'text');
+
 $('#editButton').click(function() {
     var nameElement = $('#name');
     var emailElement = $('#email');
     var phoneElement = $('#phone');
 
-    if ($(this).text() === 'Изменить данные') {
-        $(this).text('Сохранить');
+    // Скрываем исходные элементы и показываем поля ввода
+    nameElement.hide();
+    emailElement.hide();
+    phoneElement.hide();
 
-        var nameClone = nameElement.clone();
-        var nameInput = $('<input>').attr('type', 'text').val(nameClone.text()).addClass(nameClone.attr('class'));
-        nameElement.replaceWith(nameInput);
+    nameElement.after(nameInput.val(nameElement.text()));
+    emailElement.after(emailInput.val(emailElement.text()));
+    phoneElement.after(phoneInput.val(phoneElement.text()));
 
-        var emailClone = emailElement.clone();
-        var emailInput = $('<input>').attr('type', 'text').val(emailClone.text()).addClass(emailClone.attr('class'));
-        emailElement.replaceWith(emailInput);
-
-        var phoneClone = phoneElement.clone();
-        var phoneInput = $('<input>').attr('type', 'text').val(phoneClone.text()).addClass(phoneClone.attr('class'));
-        phoneElement.replaceWith(phoneInput);
-    } else {
-        $(this).text('Изменить данные');
-
-        var nameSpan = $('<span>').text(nameElement.val()).addClass(nameElement.attr('class'));
-        nameElement.replaceWith(nameSpan);
-
-        var emailSpan = $('<span>').text(emailElement.val()).addClass(emailElement.attr('class'));
-        emailElement.replaceWith(emailSpan);
-
-        var phoneSpan = $('<span>').text(phoneElement.val()).addClass(phoneElement.attr('class'));
-        phoneElement.replaceWith(phoneSpan);
-    }
+    // Скрываем кнопку "Изменить данные" и показываем кнопку "Сохранить"
+    $(this).hide();
+    $('#saveButton').show();
 });
+
+$('#saveButton').click(function() {
+    var nameElement = $('#name');
+    var emailElement = $('#email');
+    var phoneElement = $('#phone');
+
+    // Получаем данные из полей ввода и сохраняем их в исходных элементах
+    nameElement.text(nameInput.val());
+    emailElement.text(emailInput.val());
+    phoneElement.text(phoneInput.val());
+
+    // Скрываем поля ввода и показываем исходные элементы
+    nameInput.remove();
+    emailInput.remove();
+    phoneInput.remove();
+
+    nameElement.show();
+    emailElement.show();
+    phoneElement.show();
+
+    // Скрываем кнопку "Сохранить" и показываем кнопку "Изменить данные"
+    $(this).hide();
+    $('#editButton').show();
+});
+
+
 
 
 
