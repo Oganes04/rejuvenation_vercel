@@ -191,6 +191,7 @@ html {
 	transition: all .3s ease;
 }
 
+
 .button:hover {
 	background-color: var(--hover-btn-color);
 }
