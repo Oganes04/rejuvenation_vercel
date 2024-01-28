@@ -95,6 +95,10 @@ html {
 	color: var(--grey-text-color);
 	max-width: 653px;
 }
+.header_logo {
+	position: relative;
+	z-index: 10;
+}
 
 .main_btn {
 	margin-top: 77px;
