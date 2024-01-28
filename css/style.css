@@ -181,6 +181,17 @@ html {
 	box-shadow: 0 0 10px #cccccc;
 }
 
+.play:active .circle {
+	fill: #C5BFB5;
+	stroke: #6D5528;
+}
+
+.play:active .path-1 {
+	fill: #6D5528;
+}
+
+
+
 
 
 
