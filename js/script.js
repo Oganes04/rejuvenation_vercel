@@ -374,8 +374,53 @@ $('#saveButton').click(function() {
 
 
 
+    $('.header_button').on("click",function(){
+        $('.login_popup').show();
+        $('.overlay').show();
+    });
+
+    $('.close_popup').on("click",function(){
+        $('.login_popup').hide();
+        $('.overlay').hide();
+    });
+     $('.login_button').on("click",function(){
+        window.location.href = "account.html";
+    });
 
 
+    $('.play').on("click",function(){
+        $('.promo_video').show();
+        $('.overlay1').show();
+    });
+
+    $('.close_popup').on("click",function(){
+        $('.promo_video').hide();
+        $('.overlay1').hide();
+    });
+     
+
+     $('.video_description-icon').click(function() {
+        var $currentVideos = $(this).parent().next('.video_description-hidden');
+        var $currentItem = $(this).parent().parent();
+
+
+        // Сбрасываем класс rotate и background-color у всех кнопок и вопросов
+        $('.video_description-icon').removeClass('rotate');
+
+        // Проверяем, раскрыт ли уже аккордеон
+        if ($currentVideos.is(':visible')) {
+            $currentVideos.slideUp();
+
+
+        } else {
+            $('.list_item-videos').slideUp();
+            $currentVideos.slideDown();
+
+
+            // Добавляем класс rotate только к нажатой кнопке
+            $(this).addClass('rotate');
+        }
+    });
 
 
 });

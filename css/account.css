@@ -481,6 +481,11 @@ html {
 	margin-left: auto;
 }
 
+.list_item-icon img {
+	transition: a, 0.3s ease-in-out;
+	-webkit-transition: a, 0.3s ease-in-out;
+}
+
 .list_item-number {
 	display: flex;
 	justify-content: center;
@@ -555,6 +560,7 @@ html {
 	line-height: 143.228%;
 	color: var(--dark-text-color);
 	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
 }
 
 
@@ -1138,6 +1144,7 @@ html {
 
 	.list_item-theme {
 		margin-left: 0;
+		-webkit-transition: all 0.3s ease-in-out;
 	}
 
 	.list_item-header {

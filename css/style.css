@@ -4,13 +4,227 @@
 body {
 	margin: 0 auto;
 	max-width: 1920px;
+	transition: a, 0.6s ease;
 }
 
 html {
  scroll-behavior: smooth;
 }
 
+/*------------------------- POPUP -------------------------*/
 
+
+.login_popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+ /*   width: 680px;
+    height: 650px;*/
+    max-width: 680px;
+    padding: 100px 150px;
+    background-color: #fff;
+}
+
+.login_popup-header {
+	font-family: Cruinn-Medium;
+	font-size: 50px;
+	font-weight: 500;
+	color: var(--accent);
+	margin-bottom: 40px;
+}
+
+.login_popup-loginInput span, .login_popup-passwordInput span{
+	font-family: Raleway;
+	font-size: 20px;
+	font-weight: 300;
+	color: var(--dark-text-color);
+}
+
+.login_popup-loginInput, .login_popup-passwordInput {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.login_popup-loginInput input,  .login_popup-passwordInput input{
+	width: 380px;
+	padding: 20px 30px;
+	border-radius: 10px;
+	background: rgba(227, 221, 211, 0.40);
+	transition: all 0.3s ease;
+	border: 1px solid transparent;
+}
+
+.login_popup-loginInput input:hover,  .login_popup-passwordInput input:hover{
+	border: 1px solid #CABDA6;
+}
+
+.login_popup-loginInput input:focus,  .login_popup-passwordInput input:focus{
+	border: 1px solid var(--accent);
+}
+
+
+.login_popup-passwordInput span {
+	font-family: Raleway;
+	font-size: 20px;
+	font-weight: 300;
+	color: var(--dark-text-color);
+}
+
+.login_popup>span {
+	color: #D1D1D1;
+	font-family: Raleway;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.login_popup>span a {
+	color: #D1D1D1;
+	font-family: Raleway;
+	font-size: 14px;
+	font-weight: 300;
+	display: inline;
+	text-decoration: underline;
+}
+
+
+.close_popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    /* Other styles as needed */
+}
+
+.close_popup div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 25px;
+    background-color: var(--accent);
+    transform: rotate(45deg);
+}
+
+.close_popup div:first-child {
+    transform: rotate(-45deg);
+}
+
+.bg_opacity {
+	opacity: 0.4;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 99;
+}
+
+.login_button {
+	margin-top: 10px;
+	width: 100%;
+	margin-bottom: 5px;
+	max-width: 380px;
+}
+
+.overlay1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9999;
+     overflow: auto
+}
+
+
+.promo_video {
+	max-width: 1000px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    background: rgba(227, 221, 211, 1);
+    padding: 40px 100px;\
+    /* overflow: auto*/
+}
+
+.promo_video-video {
+	text-align: center;
+}
+
+.promo_video img {
+
+	margin-bottom: 40px;
+
+}
+
+.promo_video p {
+	font-family: Raleway;
+	font-size: clamp(14px, 1.04vw, 1.04vw);
+	font-weight: 300;
+	margin-bottom: 20px;
+	max-width: 1000px;
+}
+
+.promo_video ol li {
+	font-family: Raleway;
+	font-size: clamp(14px, 1.04vw, 1.04vw);
+	font-weight: 300;
+	max-width: 1000px;
+}
+
+
+.question-icon img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.rotate {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.video_description-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 16px;
+	font-family:  Cruinn-Regular;
+	font-weight: 400;
+	text-transform: uppercase;
+	padding-bottom: 5px;
+}
+
+.video_description-hidden>p {
+	margin-bottom: 5px;
+}
+
+.video_description-icon {
+	width: 30px;
+	height: 30px;
+}
+
+.video_description-hidden {
+	display: none;
+}
+
+.video_description {
+	display: none;
+}
 
 /*------------------------- MAIN -------------------------*/
 
@@ -221,6 +435,7 @@ html {
 
 .bg_img-adaptive {
 	display: none;
+	transition: a, 0.6s ease;
 }
 
 /*.nav_adaptive {
@@ -958,6 +1173,7 @@ html {
 
 	.main_rows-first, .main_rows-second, .main_rows-third {
 		opacity: .4;
+		transition: a, 0.6s ease;
 	}
 
 	[class*="rows"] {
@@ -1041,6 +1257,19 @@ html {
 
 
 @media only screen and (max-width: 1300px) {
+
+	.promo_video p {
+		font-size: 12px
+	}
+
+	.promo_video ol li {
+		font-size: 12px
+	}
+
+	.promo_video-video {
+		width: 700px;
+	}
+
 
 	.reasons {
 		padding-bottom: 30px;
@@ -1164,9 +1393,27 @@ html {
 		padding: 41px 140px 31px;
 	}
 
+	.login_popup {
+		padding: 60px 120px;
+	}
 }
 
 @media only screen and (max-width: 1150px) {
+	
+	.promo_video-video {
+		width: 600px;
+	}
+
+	.promo_video p {
+		font-size: 12px;
+	}
+
+	.promo_video ol li {
+		font-size: 12px;
+
+	}
+
+
 	.about_inner {
 		padding: 88px 90px 32px
 	}
@@ -1291,6 +1538,11 @@ html {
 }
 
 @media only screen and (max-width: 904px) {
+
+	.promo_video {
+		padding: 30px 50px;
+	}
+
 	.about_inner {
 		flex-direction: column;
 		align-items: center;
@@ -1333,6 +1585,8 @@ html {
 	.course_item {
 		padding: 25px 35px;
 	}
+
+
 }
 
 
@@ -1425,10 +1679,9 @@ html {
 		height: 100px;
 	}
 
-.reviews_item {
-	margin: 0 5px;
-}
-
+	.reviews_item {
+		margin: 0 5px;
+	}
 }
 
 @media only screen and (max-width: 800px) {
@@ -1620,11 +1873,17 @@ html {
 }
 
 .hide_row {
-	display: none;
+	opacity: 0;
 }
 
 
 @media only screen and (max-width: 700px) {
+
+	.promo_video-video {
+		width: 450px;
+	}
+
+
 
 
 	.header-adaptive {
@@ -1745,6 +2004,15 @@ html {
 	.play {
 		width: 80px;
 		height: 80px;
+	}
+
+	.login_popup-loginInput input,  .login_popup-passwordInput input{
+		width: 270px;
+		padding: 15px 25px;
+	}
+
+	.login_popup {
+		padding: 23px 23px;
 	}
 
 
@@ -1929,6 +2197,24 @@ html {
 	.privacy_policy span, a {
 		font-size: 14px;
 	}	
+
+	.promo_video {
+		padding:  20px;
+		width: 95%;
+	}
+
+	.promo_video-video {
+		margin-top: 50px;
+		width: 100%;
+	}
+
+	.promo_video-paragraf, .promo_video-paragraf+ol {
+		display: none;
+	}
+
+	.video_description {
+		display: block;
+	}
 }
 
 
