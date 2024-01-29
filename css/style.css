@@ -1860,6 +1860,7 @@ html {
 
 .nav_adaptive>.nav_item a {
 	font-size: 24px;
+	padding: 5px;
 }
 
 .nav_adaptive.open {

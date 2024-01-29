@@ -460,8 +460,8 @@ $('#saveButton').click(function() {
     });
      
 
-     $('.video_description-icon').click(function() {
-        var $currentVideos = $(this).parent().next('.video_description-hidden');
+     $('.video_description-header').click(function() {
+        var $currentVideos = $(this).parent().find('.video_description-hidden');
         var $currentItem = $(this).parent().parent();
 
 
@@ -479,7 +479,7 @@ $('#saveButton').click(function() {
 
 
             // Добавляем класс rotate только к нажатой кнопке
-            $(this).addClass('rotate');
+            $('.video_description-icon').addClass('rotate');
         }
     });
 
