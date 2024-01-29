@@ -109,6 +109,7 @@ html {
     background-color: var(--beige-bg);
     z-index: 100;
     padding-top: 20px;
+    font-size: 24px;
 }
 
 .nav_adaptive.open {
@@ -122,7 +123,8 @@ html {
 }
 
 .nav_adaptive .header_button {
-	margin: 0 auto;
+	margin: 20px auto 0;
+	font-size: 16px;
 }
 
 /* Стили для бургер-меню при нажатии */

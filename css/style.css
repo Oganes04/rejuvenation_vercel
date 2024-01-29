@@ -640,9 +640,10 @@ html {
 
 
 .about_img img{
-    /*width: 547px;*/
+    width: 547px;
     width:  clamp(400px, 28.4vw, 28.4vw);
     max-width: none;
+    border-radius: 15px 15px 15px 0px;
 }
 
 /*-------------------------------- О КУРСЕ --------------------------------*/
@@ -806,6 +807,10 @@ html {
 	flex-direction: row-reverse;
 }
 
+.program_item-revers>.program_item-img img {
+	border-radius: 0px 15px 15px 0px;
+}
+
 .program_item-info {
 	padding: 50px 30px 50px 100px;
 	flex-grow: 1;
@@ -836,6 +841,7 @@ html {
     width: 23.9vw;
     height: 18.2vw;
     max-width: none;
+    border-radius: 15px 0px 0px 15px;
 }
 
 .program_item-bonus {
@@ -1852,6 +1858,10 @@ html {
     padding-top: 20px;
 }
 
+.nav_adaptive>.nav_item a {
+	font-size: 24px;
+}
+
 .nav_adaptive.open {
 	visibility: visible;
 	left: 0;
@@ -1864,7 +1874,7 @@ html {
 }
 
 .nav_adaptive .header_button {
-	margin: 0 auto;
+	margin: 20px auto 0;
 }
 
 
@@ -1943,7 +1953,10 @@ html {
 	.program_item-img img {
 		width: 300px;
 		height: 228px;
+		border-radius: 15px 15px 0 0;
 	}
+
+
 
 	.program_item {
 		width: 300px;

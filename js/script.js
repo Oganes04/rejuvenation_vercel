@@ -260,10 +260,36 @@ $('.slider-2').on('beforeChange', function(event, slick, currentSlide, nextSlide
 
 
 
-     $('.question-icon').click(function() {
-        var $currentAnswer = $(this).parent().next('.questions_item-answer');
-        var $currentQuestion = $(this).parent().parent();
-        var $currentQuestionText = $(this).parent().find('.question-question');
+    //  $('.question-icon').click(function() {
+    //     var $currentAnswer = $(this).parent().next('.questions_item-answer');
+    //     var $currentQuestion = $(this).parent().parent();
+    //     var $currentQuestionText = $(this).parent().find('.question-question');
+        
+    //     // Сбрасываем класс rotate и background-color у всех кнопок и вопросов
+    //     $('.question-icon').find('img').removeClass('rotate');
+    //     $('.questions_item').css('background-color', '#ffffff');
+    //      $('.question-question').removeClass('bold');
+
+        
+    //     // Проверяем, раскрыт ли уже аккордеон
+    //     if ($currentAnswer.is(':visible')) {
+    //         $currentAnswer.slideUp();
+          
+    //     } else {
+    //         $('.questions_item-answer').slideUp();
+    //         $currentAnswer.slideDown();
+    //         $currentQuestion.css('background-color', 'var(--translucent-color)');
+    //         $currentQuestionText.addClass('bold');
+
+    //         // Добавляем класс rotate только к нажатой кнопке
+    //         $(this).find('img').addClass('rotate');
+    //     }
+    // });
+
+     $('.question').click(function() {
+        var $currentAnswer = $(this).next('.questions_item-answer');
+        var $currentQuestion = $(this).parent();
+        var $currentQuestionText = $(this).find('.question-question');
         
         // Сбрасываем класс rotate и background-color у всех кнопок и вопросов
         $('.question-icon').find('img').removeClass('rotate');
@@ -290,11 +316,46 @@ $('.slider-2').on('beforeChange', function(event, slick, currentSlide, nextSlide
 
 
 
-    $('.list_item-icon').click(function() {
-        var $currentVideos = $(this).parent().next('.list_item-videos');
-        var $currentItem = $(this).parent().parent();
-        var $currentTheme = $(this).parent().find('.list_item-theme');
-        var $currentHeader = $(this).parent();
+
+
+
+    // $('.list_item-icon').click(function() {
+    //     var $currentVideos = $(this).parent().next('.list_item-videos');
+    //     var $currentItem = $(this).parent().parent();
+    //     var $currentTheme = $(this).parent().find('.list_item-theme');
+    //     var $currentHeader = $(this).parent();
+
+    //     // Сбрасываем класс rotate и background-color у всех кнопок и вопросов
+    //     $('.list_item-icon').find('img').removeClass('rotate');
+    //     $('.list_item').removeClass('list_item-color')
+
+    //     $('.list_item-theme').removeClass('bold');
+    //     $('.list_item-header').css('border-bottom', '1px solid var(--dark-text-color)');
+
+    //     // Проверяем, раскрыт ли уже аккордеон
+    //     if ($currentVideos.is(':visible')) {
+    //         $currentVideos.slideUp();
+
+
+    //     } else {
+    //         $('.list_item-videos').slideUp();
+    //         $currentVideos.slideDown();
+    //         $currentItem.addClass('list_item-color')
+    //         $currentTheme.addClass('bold');
+    //         $currentHeader.css('border-bottom', 'none');
+
+
+    //         // Добавляем класс rotate только к нажатой кнопке
+    //         $(this).find('img').addClass('rotate');
+    //     }
+    // });
+
+
+    $('.list_item-header').click(function() {
+        var $currentVideos = $(this).next('.list_item-videos');
+        var $currentItem = $(this).parent();
+        var $currentTheme = $(this).find('.list_item-theme');
+        var $currentHeader = $(this);
 
         // Сбрасываем класс rotate и background-color у всех кнопок и вопросов
         $('.list_item-icon').find('img').removeClass('rotate');
