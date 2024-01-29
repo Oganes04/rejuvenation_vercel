@@ -1956,7 +1956,10 @@ html {
 		border-radius: 15px 15px 0 0;
 	}
 
-
+	
+	.program_item-revers>.program_item-img img {
+		border-radius: 15px 15px 0px 0px;
+	}
 
 	.program_item {
 		width: 300px;
