@@ -395,6 +395,7 @@ html {
 	cursor: pointer;
 	stroke: #A99164;
 	transition: all 0.3s ease;
+
 }
 
 .progress_header-rowsLeft path, .progress_header-rowsRight path {
@@ -835,7 +836,7 @@ html {
 	.progress_week  {
 		padding: 50px 50px;
 	}
-	[class*="rows"] {
+	[class*="rows"]:not(.progress_header-rows) {
     opacity: .4;
 	}
 }
@@ -976,7 +977,7 @@ html {
 
 
 @media only screen and (max-width: 730px) {
-	[class*="rows"] {
+	[class*="rows"]:not(.progress_header-rows) { {
 	    display: none;
 	}
 }
