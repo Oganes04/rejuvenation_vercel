@@ -977,7 +977,7 @@ html {
 
 
 @media only screen and (max-width: 730px) {
-	[class*="rows"]:not(.progress_header-rows) { {
+	[class*="rows"]:not(.progress_header-rows) { 
 	    display: none;
 	}
 }
