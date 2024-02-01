@@ -323,8 +323,8 @@ $('#editButton').click(function() {
     phoneElement.hide();
 
     nameElement.after(nameInput.val(nameElement.text()).css('width', (nameElement.outerWidth() + 20) + 'px'));
-    emailElement.after(emailInput.val(emailElement.text()));
-    phoneElement.after(phoneInput.val(phoneElement.text()));
+    emailElement.after(emailInput.val(emailElement.text()).css('width', (emailElement.outerWidth() + 20) + 'px'));
+    phoneElement.after(phoneInput.val(phoneElement.text()).css('width', (phoneElement.outerWidth() + 20) + 'px'));
 
 
     $(this).hide();

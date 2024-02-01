@@ -2289,6 +2289,14 @@ html {
 	.video_description {
 		display: block;
 	}
+
+	#registration_popup .close_popup {
+		top: 30px;
+	}
+
+	.registration_popup-header {
+		font-size: 40px;
+	}
 }
 
 
