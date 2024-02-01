@@ -1334,3 +1334,18 @@ html {
 
 }	
 
+@media only screen and (max-width: 1000px) and (orientation: landscape) {
+
+	.overlay1 {
+		padding-top: 30px;
+	}
+
+	.video_popup {
+		padding: 40px 10px 10px 10px;
+		text-align: center;
+	}
+
+	.video_popup img {
+		height: 36vw;
+	}
+}
