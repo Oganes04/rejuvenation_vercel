@@ -122,7 +122,7 @@ html {
 	margin-bottom: 10px;
 }
 
-.nav_adaptive .header_button {
+.nav_adaptive .header_button-rev {
 	margin: 20px auto 0;
 	font-size: 16px;
 }
@@ -207,7 +207,7 @@ html {
 	background-color: var(--active-btn-color);
 }
 
-.header_button {
+.header_button-rev {
 	padding: 15px 52px 15px 50px;
 	font-size: clamp(12px, 0.83vw, 0.83vw);
 }
@@ -988,7 +988,7 @@ html {
 		font-size: 14px;
 	}
 
-	.header_button {
+	.header_button-rev {
 		padding: 15px 32px;
 	}
 
