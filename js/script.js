@@ -1,4 +1,10 @@
 $(document).ready(function(){
+
+
+
+//=============================== Слайдер главной страницы
+
+
  $('.slider').slick({
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -19,28 +25,7 @@ $(document).ready(function(){
  });
 
 
-
-
-
-
- $('#burger_menu').on('click', function() {
-    $(this).toggleClass('open');
-    $('.nav_adaptive').toggleClass('open');
-    $('.main_section').toggleClass('open');
-    $('body').toggleClass('locked'); 
-    $('.header_logo').toggle();
- });
-
-  $('.nav_item a').on('click', function() {
-    $("#burger_menu").removeClass('open');
-    $('.nav_adaptive').removeClass('open');
-     $('.main_section').removeClass('open');
-    $('body').removeClass('locked');
-    $('.header_logo').css('display', 'block');
- });
-
-
-
+//=============================== Бургер меню
 
  $('#burger_menu2').on('click', function() {
     $(this).toggleClass('open');
@@ -82,7 +67,7 @@ $(document).ready(function(){
 
 
 
-
+//=============================== Слайдер личного кабинета
 
 
 
@@ -165,13 +150,6 @@ function getLastVisibleCircle() {
     
     return lastVisibleCircle;
 }
-
-
-
-    
-
-
-
 
 
     $('.filled-dot-0').hide();
@@ -259,32 +237,8 @@ $('.slider-2').on('beforeChange', function(event, slick, currentSlide, nextSlide
 
 
 
+//=============================== Аккордион часто задаваемых вопросов
 
-    //  $('.question-icon').click(function() {
-    //     var $currentAnswer = $(this).parent().next('.questions_item-answer');
-    //     var $currentQuestion = $(this).parent().parent();
-    //     var $currentQuestionText = $(this).parent().find('.question-question');
-        
-    //     // Сбрасываем класс rotate и background-color у всех кнопок и вопросов
-    //     $('.question-icon').find('img').removeClass('rotate');
-    //     $('.questions_item').css('background-color', '#ffffff');
-    //      $('.question-question').removeClass('bold');
-
-        
-    //     // Проверяем, раскрыт ли уже аккордеон
-    //     if ($currentAnswer.is(':visible')) {
-    //         $currentAnswer.slideUp();
-          
-    //     } else {
-    //         $('.questions_item-answer').slideUp();
-    //         $currentAnswer.slideDown();
-    //         $currentQuestion.css('background-color', 'var(--translucent-color)');
-    //         $currentQuestionText.addClass('bold');
-
-    //         // Добавляем класс rotate только к нажатой кнопке
-    //         $(this).find('img').addClass('rotate');
-    //     }
-    // });
 
      $('.question').click(function() {
         var $currentAnswer = $(this).next('.questions_item-answer');
@@ -314,41 +268,7 @@ $('.slider-2').on('beforeChange', function(event, slick, currentSlide, nextSlide
 
 
 
-
-
-
-
-
-    // $('.list_item-icon').click(function() {
-    //     var $currentVideos = $(this).parent().next('.list_item-videos');
-    //     var $currentItem = $(this).parent().parent();
-    //     var $currentTheme = $(this).parent().find('.list_item-theme');
-    //     var $currentHeader = $(this).parent();
-
-    //     // Сбрасываем класс rotate и background-color у всех кнопок и вопросов
-    //     $('.list_item-icon').find('img').removeClass('rotate');
-    //     $('.list_item').removeClass('list_item-color')
-
-    //     $('.list_item-theme').removeClass('bold');
-    //     $('.list_item-header').css('border-bottom', '1px solid var(--dark-text-color)');
-
-    //     // Проверяем, раскрыт ли уже аккордеон
-    //     if ($currentVideos.is(':visible')) {
-    //         $currentVideos.slideUp();
-
-
-    //     } else {
-    //         $('.list_item-videos').slideUp();
-    //         $currentVideos.slideDown();
-    //         $currentItem.addClass('list_item-color')
-    //         $currentTheme.addClass('bold');
-    //         $currentHeader.css('border-bottom', 'none');
-
-
-    //         // Добавляем класс rotate только к нажатой кнопке
-    //         $(this).find('img').addClass('rotate');
-    //     }
-    // });
+//=============================== Аккорлион в прогрессе
 
 
     $('.list_item-header').click(function() {
@@ -385,6 +305,10 @@ $('.slider-2').on('beforeChange', function(event, slick, currentSlide, nextSlide
 
 
 
+
+//=============================== Добавление input для редактирования личных данных
+
+
 var nameInput = $('<input>').attr('type', 'text');
 var emailInput = $('<input>').attr('type', 'text');
 var phoneInput = $('<input>').attr('type', 'text');
@@ -394,16 +318,15 @@ $('#editButton').click(function() {
     var emailElement = $('#email');
     var phoneElement = $('#phone');
 
-    // Скрываем исходные элементы и показываем поля ввода
     nameElement.hide();
     emailElement.hide();
     phoneElement.hide();
 
-    nameElement.after(nameInput.val(nameElement.text()));
+    nameElement.after(nameInput.val(nameElement.text()).css('width', (nameElement.outerWidth() + 20) + 'px'));
     emailElement.after(emailInput.val(emailElement.text()));
     phoneElement.after(phoneInput.val(phoneElement.text()));
 
-    // Скрываем кнопку "Изменить данные" и показываем кнопку "Сохранить"
+
     $(this).hide();
     $('#saveButton').show();
 });
@@ -413,12 +336,10 @@ $('#saveButton').click(function() {
     var emailElement = $('#email');
     var phoneElement = $('#phone');
 
-    // Получаем данные из полей ввода и сохраняем их в исходных элементах
     nameElement.text(nameInput.val());
     emailElement.text(emailInput.val());
     phoneElement.text(phoneInput.val());
 
-    // Скрываем поля ввода и показываем исходные элементы
     nameInput.remove();
     emailInput.remove();
     phoneInput.remove();
@@ -427,7 +348,6 @@ $('#saveButton').click(function() {
     emailElement.show();
     phoneElement.show();
 
-    // Скрываем кнопку "Сохранить" и показываем кнопку "Изменить данные"
     $(this).hide();
     $('#editButton').show();
 });
@@ -435,20 +355,64 @@ $('#saveButton').click(function() {
 
 
 
+//=============================== Popup со входом
+
+
     $('.header_button').on("click",function(){
-        $('.login_popup').show();
+        $('#login_popup').show();
         $('.overlay').show();
+        $('html').toggleClass('locked');
+        $('body').toggleClass('locked');
     });
 
     $('.close_popup').on("click",function(){
-        $('.login_popup').hide();
+        $('#login_popup').hide();
+        $('#registration_popup').hide();
         $('.overlay').hide();
+        $('html').removeClass('locked');
+        $('body').removeClass('locked');
     });
      $('.login_button').on("click",function(){
         window.location.href = "account.html";
     });
 
+     $(".registration_span a").click(function(e){
+        e.preventDefault();
+        $("#registration_popup").show();
+        $('#login_popup').hide();
+    });
 
+
+    $('.contraindications_link ').on("click",function(){
+        $('#contraindications').show();
+        $('.overlay1').show();
+        $('html').toggleClass('locked');
+        $('body').toggleClass('locked');
+    });
+
+    $('.close_popup').on("click",function(){
+        $('#contraindications').hide();
+        $('.overlay1').hide();
+        $('html').removeClass('locked');
+        $('body').removeClass('locked');
+    });
+
+    $('.video_link').on("click",function(){
+        $('.video_popup').show();
+        $('.overlay1').show();
+        $('html').toggleClass('locked');
+        $('body').toggleClass('locked');
+    });
+
+    $('.close_popup').on("click",function(){
+        $('.video_popup').hide();
+        $('.overlay1').hide();
+        $('html').removeClass('locked');
+        $('body').removeClass('locked');
+    });
+     
+
+//=============================== Popup с промороликом
     $('.play').on("click",function(){
         $('.promo_video').show();
         $('.overlay1').show();

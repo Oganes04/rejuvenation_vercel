@@ -90,6 +90,53 @@ html {
 	text-decoration: underline;
 }
 
+.registration_span {
+	margin-top: 5px;
+	color: var(--dark-text-color);
+	font-family: Raleway;
+}
+
+
+#registration_popup {
+	padding: 50px 150px;
+	z-index: 10000;
+}
+
+.registration_span {
+	font-size: 14px;
+	font-family: Raleway;
+}
+
+.registration_span a {
+	font-size: 14px;
+	font-family: Raleway;
+	display: inline;
+	text-decoration:  underline;
+}
+
+.registration_popup-header {
+	margin-bottom: 15px;
+	font-size: 50px;
+	gap: 5px;
+}
+
+.registration_popup-nameInput,
+.registration_popup-phoneInput, 
+.registration_popup-loginInput, 
+.registration_popup-passwordInput {
+	margin-bottom: 10px;
+}
+
+#registration_popup input {
+	padding: 15px 30px;
+}
+
+.registration_popup-nameInput span, 
+.registration_popup-phoneInput span,
+.registration_popup-loginInput span,
+.registration_popup-passwordInput span {
+	font-size: 18px;
+}
 
 .close_popup {
     position: absolute;
@@ -127,7 +174,7 @@ html {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
-    z-index: 99;
+    z-index: 9999;
 }
 
 .login_button {
@@ -2035,6 +2082,14 @@ html {
 	}
 
 
+
+}
+
+
+@media only screen and (max-width: 600px) {
+	#registration_popup {
+		padding: 50px 50px
+	}
 }
 
 
@@ -2311,6 +2366,44 @@ html {
 		bottom: -8px;
 	}
 
+	.login_popup-header {
+		font-size: 32px;
+		margin-bottom: 20px;
+	}
+
+	#registration_popup {
+		padding: 23px;
+	}
+
+	.registration_popup-nameInput,
+	.registration_popup-phoneInput, 
+	.registration_popup-loginInput, 
+	.registration_popup-passwordInput {
+		margin-bottom: 5px;
+	}
+
+	#registration_popup input {
+		padding: 10px 30px;
+	}
+
+	.registration_popup-nameInput span, 
+	.registration_popup-phoneInput span,
+	.registration_popup-loginInput span,
+	.registration_popup-passwordInput span {
+		font-size: 14px;
+	}
+
+	.registration_popup-passwordInput+button {
+		padding: 10px 30px;
+	}
+
+	.registration_popup-passwordInput+button+span {
+		font-size: 10px;
+	}
+
+	.registration_popup-passwordInput+button+span a{
+		font-size: 10px;
+	}
 	
 }
 
@@ -2338,3 +2431,7 @@ html {
 
 
 
+.scrollable {
+    max-height: calc(100vh - 20px); 
+    overflow-y: auto; 
+}

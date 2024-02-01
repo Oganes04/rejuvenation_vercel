@@ -213,6 +213,94 @@ html {
 }
 
 
+.scrollable {
+    max-height: calc(100vh - 20px); 
+    overflow-y: auto; 
+}
+
+.overlay1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9999;
+    overflow: auto;
+    padding: 10px;
+}
+
+.promo_video {
+	max-width: 1000px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    background: rgba(227, 221, 211, 1);
+    padding: 40px 100px;
+}
+
+.promo_video-video {
+	text-align: center;
+}
+
+.video_description-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 16px;
+	font-family:  Cruinn-Regular;
+	font-weight: 400;
+	text-transform: uppercase;
+	padding-bottom: 5px;
+}
+
+#contraindications ul {
+	list-style: disc;
+	margin-bottom: 20px;
+}
+
+#contraindications ul li {
+	list-style-type: disc;
+	font-family: Raleway;
+	font-weight: 300;
+	font-size:clamp(12px, 1.14vw, 1.14vw);
+	color: var(--dark-text-color);
+}
+
+.contraindications_header-popup {
+	font-family:  Cruinn-Regular;
+	font-weight: 400;
+	font-size:clamp(12px, 1.14vw, 1.14vw);
+	color: var(--accent);
+	margin-bottom: 0;
+}
+
+
+.close_popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px; 
+}
+
+.close_popup div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 25px;
+    background-color: var(--accent);
+    transform: rotate(45deg);
+}
+
+.close_popup div:first-child {
+    transform: rotate(-45deg);
+}
 
 .main {
 	margin: 86px 0 88px;
@@ -972,6 +1060,15 @@ html {
 	    bottom: -33px;
 	}
 
+	.video_popup {
+		padding: 40px 40px;
+	}
+
+	.video_popup .close_popup{
+		top: 0;
+		right: 15px;
+	}
+
 }
 
 
@@ -1134,6 +1231,10 @@ html {
 		gap: 10px;
 	}
 
+	#contraindications {
+		padding: 40px 50px;
+	}
+
 
 }
 
@@ -1227,4 +1328,9 @@ html {
 		padding: 15px 32px;
 	}
 
+	.video_popup {
+		padding: 40px 10px 10px 10px;
+	}
+
 }	
+
