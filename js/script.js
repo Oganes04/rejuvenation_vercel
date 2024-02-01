@@ -63,6 +63,17 @@ $(document).ready(function(){
 
  });
 
+ $('.header_button-rev').on('click', function() {
+   $(this).removeClass('open');
+   $("#burger_menu2").removeClass('open');
+   $('.nav_adaptive').removeClass('open');
+   $('body').removeClass('adaptive_header-bgc');
+   $('html').removeClass('locked');
+   $('body').removeClass('locked');
+   $('.main_rows-first').removeClass('hide_row');
+   $('.bg_img-adaptive').removeClass('hide_row');
+
+ });
 
 
 
@@ -449,7 +460,7 @@ $('#saveButton').click(function() {
 
 
 
-     
+
 
 
 
