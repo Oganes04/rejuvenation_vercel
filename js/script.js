@@ -409,19 +409,27 @@ $('#saveButton').click(function() {
     });
 
     $('.video_link').on("click",function(){
-        $('.video_popup').show();
+        $('.video_popup-prog').show();
         $('.overlay1').show();
         $('html').toggleClass('locked');
         $('body').toggleClass('locked');
     });
 
     $('.close_popup').on("click",function(){
-        $('.video_popup').hide();
+        $('.video_popup-prog').hide();
         $('.overlay1').hide();
         $('html').removeClass('locked');
         $('body').removeClass('locked');
     });
-     
+
+
+     $('#registration_button').on("click",function(){
+        $('#login_popup').show();
+        $('#registration_popup').hide();
+    });
+    
+
+
 
 //=============================== Popup с промороликом
     $('.play').on("click",function(){

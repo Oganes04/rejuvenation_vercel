@@ -184,6 +184,13 @@ html {
 	max-width: 380px;
 }
 
+.login_button-reg {
+	margin-top: 10px;
+	width: 100%;
+	margin-bottom: 5px;
+	max-width: 380px;
+}
+
 .overlay1 {
     position: fixed;
     top: 0;
