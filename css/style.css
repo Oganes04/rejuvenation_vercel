@@ -205,26 +205,22 @@ html {
 
 
 .promo_video {
-	max-width: 1000px;
+	/*max-width: 1000px;*/
+	width: 80%;
     position: relative;
     top: 50%;
     left: 50%;
     z-index: 1000;
     transform: translate(-50%, -50%);
     background: rgba(227, 221, 211, 1);
-    padding: 40px 100px;\
-    /* overflow: auto*/
+    padding: 40px 100px;
 }
 
 .promo_video-video {
 	text-align: center;
 }
 
-.promo_video img {
 
-	margin-bottom: 40px;
-
-}
 
 .promo_video p {
 	font-family: Raleway;
@@ -1328,10 +1324,10 @@ html {
 		font-size: 12px
 	}
 
-	.promo_video-video {
+	/*.promo_video-video {
 		width: 700px;
 	}
-
+*/
 
 	.reasons {
 		padding-bottom: 30px;
@@ -1462,9 +1458,9 @@ html {
 
 @media only screen and (max-width: 1150px) {
 	
-	.promo_video-video {
+	/*.promo_video-video {
 		width: 600px;
-	}
+	}*/
 
 	.promo_video p {
 		font-size: 12px;
@@ -1946,11 +1942,9 @@ html {
 
 @media only screen and (max-width: 700px) {
 
-	.promo_video-video {
+	/*.promo_video-video {
 		width: 450px;
-	}
-
-
+	}*/
 
 
 	.header-adaptive {
